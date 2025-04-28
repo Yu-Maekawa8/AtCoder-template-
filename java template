@@ -1,0 +1,22 @@
+/*
+*Java version template 
+*v1.0 4/28
+*
+*
+*/
+
+import java.util.*;
+
+public class Main {
+    public static void main(String [] args) {
+        try(Scanner sc = new Scanner(System.in)){
+
+        }
+            
+    }
+    public static void swap(Object[] a ,int i ,int j) {
+        Object tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+}

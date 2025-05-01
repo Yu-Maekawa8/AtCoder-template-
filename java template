@@ -85,7 +85,7 @@ public class Main {
 		"int size = sc.nextInt();",
 		"int[] ar = new int[size];",
 		"for (int i = 0; i < size; i++) {",
-		"    vec[i] = sc.nextInt();",
+		"    ar[i] = sc.nextInt();",
 		"}"
 		],
 		"description": "Input a 1D array"
@@ -98,7 +98,7 @@ public class Main {
 		"int[][] grid = new int[h][w];",
 		"for (int i = 0; i < h; i++) {",
 		"    for (int j = 0; j < w; j++) {",
-		"        mat[i][j] = sc.nextInt();",
+		"        grid[i][j] = sc.nextInt();",
 		"    }",
 		"}"
 		],

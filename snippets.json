@@ -1,0 +1,372 @@
+"Java CP Scanner Template": {
+	  "prefix": "jtem",
+	  "body": [
+		"import java.util.*;",
+		"",
+		"public class Main {",
+		"    public static void main(String[] args) {",
+		"        try (Scanner sc = new Scanner(System.in)) {",
+		"            $0",
+		"        }",
+		"    }",
+		"}"
+	  ],
+	  "description": "Java competitive programming template using Scanner"
+	},
+	  
+	"in": {
+	  "prefix": "in",
+	  "body": ["int n = sc.nextInt();"],
+	  "description": "Single int input"
+	},
+	"in2": {
+		"prefix": "in2",
+		"body": ["int in1 = sc.nextInt();", "int in2 = sc.nextInt();"],
+		"description": "Two int inputs"
+	},
+	"in3": {
+		"prefix": "in3",
+		"body": [
+		"int in1 = sc.nextInt();",
+		"int in2 = sc.nextInt();",
+		"int in3 = sc.nextInt();"
+		],
+		"description": "Three int inputs"
+	},
+	"in4": {
+		"prefix": "in4",
+		"body": [
+		"int in1 = sc.nextInt();",
+		"int in2 = sc.nextInt();",
+		"int in3 = sc.nextInt();",
+		"int in4 = sc.nextInt();"
+		],
+		"description": "Four int inputs"
+	},
+	"in5": {
+		"prefix": "in5",
+		"body": [
+		"int in1 = sc.nextInt();",
+		"int in2 = sc.nextInt();",
+		"int in3 = sc.nextInt();",
+		"int in4 = sc.nextInt();",
+		"int in5 = sc.nextInt();"
+		],
+		"description": "Five int inputs"
+	},
+	"arin": {
+		"prefix": "ar",
+		"body": [
+		"int size = sc.nextInt();",
+		"int[] ar = new int[size];",
+		"for (int i = 0; i < size; i++) {",
+		"    ar[i] = sc.nextInt();",
+		"}"
+		],
+		"description": "Input a 1D array"
+	},
+	"arin2": {
+		"prefix": "ar2",
+		"body": [
+		"int h = sc.nextInt();",
+		"int w = sc.nextInt();",
+		"int[][] grid = new int[h][w];",
+		"for (int i = 0; i < h; i++) {",
+		"    for (int j = 0; j < w; j++) {",
+		"        grid[i][j] = sc.nextInt();",
+		"    }",
+		"}"
+		],
+		"description": "Input a 2D array"
+	},
+	"lo": {
+	  "prefix": "lo",
+	  "body": ["long n = sc.nextLong();"],
+	  "description": "Single long input"
+	},
+	"lo2": {
+		"prefix": "lo2",
+		"body": [
+		"long in1 = sc.nextLong();",
+		"long in2 = sc.nextLong();"
+		],
+		"description": "Two long inputs"
+	},
+	"st": {
+		"prefix": "st",
+		"body": ["String s = sc.next();"],
+		"description": "Single String input"
+	},
+	"st2": {
+		"prefix": "st2",
+		"body": [
+		"String str1 = sc.next();",
+		"String str2 = sc.next();"
+		],
+		"description": "Two String inputs"
+	},
+	"ch": {
+		"prefix": "ch",
+		"body": ["char c = sc.next().charAt(0);"],
+		"description": "Single char input"
+	},
+	"ch2": {
+		"prefix": "ch2",
+		"body": [
+		"char ch1 = sc.next().charAt(0);",
+		"char ch2 = sc.next().charAt(0);"
+		],
+		"description": "Two char inputs"
+	},
+	"dob": {
+		"prefix": "dob",
+		"body": ["double d = sc.nextDouble();"],
+		"description": "Single double input"
+	},
+	"dob2": {
+		"prefix": "dob2",
+		"body": [
+		"double d1 = sc.nextDouble();",
+		"double d2 = sc.nextDouble();"
+		],
+		"description": "Two double inputs"
+	},
+	"ars": {
+		"prefix": "ars",
+		"body": [
+		"int n = sc.nextInt();",
+		"String[] arr = new String[n];",
+		"for (int i = 0; i < n; i++) {",
+		"    arr[i] = sc.next();",
+		"}"
+		],
+		"description": "Input String array"
+	},
+	"ars2": {
+		"prefix": "ars2",
+		"body": [
+		"int n = sc.nextInt();",
+		"String[][] arr = new String[n][n];",
+		"for (int i = 0; i < n; i++) {",
+		"    for (int j = 0; j < n; j++) {",
+		"        arr[i][j] = sc.next();",
+		"    }",
+		"}"
+		],
+		"description": "Input String 2D array"
+	},
+	"liin": {
+		"prefix": "liin",
+		"body": [
+		"int n = sc.nextInt();",
+		"List<Integer> list = new ArrayList<>();",
+		"for (int i = 0; i < n; i++) {",
+		"    list.add(sc.next());",
+		"}"
+		],
+		"description": "Input List<String>"
+	},
+	"liin2": {
+		"prefix": "liin2",
+		"body": [
+		"int n = sc.nextInt();",
+		"List<List<Integer>> list = new ArrayList<>();",
+		"for (int i = 0; i < n; i++) {",
+		"    List<Integer> innerList = new ArrayList<>();",
+		"    for (int j = 0; j < n; j++) {",
+		"        innerList.add(sc.next());",
+		"    }",
+		"    list.add(innerList);",
+		"}"
+		],
+		"description": "Input List<List<String>>"
+	},
+	"listr": {
+		"prefix": "listr",
+		"body": [
+			"int n = sc.nextInt();",
+			"List<String> list = new ArrayList<>();",
+			"for (int i = 0; i < n; i++) {",
+			"    list.add(sc.next());",
+			"}"
+		],
+		"description": "Input List<String>"
+	},
+
+	"listr2": {
+		"prefix": "listr2",
+		"body": [
+			"int h = sc.nextInt();",
+			"int w = sc.nextInt();",
+			"List<List<String>> grid = new ArrayList<>();",
+			"for (int i = 0; i < h; i++) {",
+			"    List<String> row = new ArrayList<>();",
+			"    for (int j = 0; j < w; j++) {",
+			"        row.add(sc.next());",
+			"    }",
+			"    grid.add(row);",
+			"}"
+		],
+		"description": "Input 2D List<String> (List of List)"
+	},
+	//変換系 List to Array, array to List
+
+	"inarr2list": {
+		"prefix": "arr2list",
+		"body": [
+			"List<Integer> list = Arrays.stream(${1:arr}).boxed().collect(Collectors.toList());"
+		],
+		"description": "Convert int[] to List<Integer>"
+	},
+	"inlist2arr": {
+		"prefix": "list2arr",
+		"body": [
+			"int[] arr = ${1:list}.stream().mapToInt(Integer::intValue).toArray();"
+		],
+		"description": "Convert List<Integer> to int[]"
+	},
+	"inlist2arr2d": {
+		"prefix": "list2arr2d",
+		"body": [
+			"int[][] arr2d = new int[${1:list2d}.size()][];",
+			"for (int i = 0; i < ${1:list2d}.size(); i++) {",
+			"    arr2d[i] = ${1:list2d}.get(i).stream().mapToInt(Integer::intValue).toArray();",
+			"}"
+		],
+		"description": "Convert List<List<Integer>> to int[][]"
+	},
+
+
+	//出力系　
+
+	"outln": {
+		"prefix": "outln",
+		"body": [
+			"System.out.println();"
+		],
+		"description": "値を出力（改行あり）"
+	},
+	"out": {
+		"prefix": "out",
+		"body": [
+			"System.out.print(${1:result});"
+		],
+		"description": "値を出力（改行なし）"
+	},
+	"outf": {
+		"prefix": "outf",
+		"body": [
+			"System.out.printf(\"%.10f\\n\", ${1:value});"
+		],
+		"description": "小数点以下10桁で出力（printf形式）"
+	},
+	"outarr": {
+  		"prefix": "outarr",
+		"body": [
+		"for (int i = 0; i < ${1:arr}.length; i++) {",
+		"    System.out.print(${1:arr}[i]);",
+		"    if (i < ${1:arr}.length - 1) System.out.print(\" \");",
+		"}",
+		"System.out.println();"
+		],
+  		"description": "int配列を1行で出力（スペース区切り）"
+	},
+	"outarr2d": {
+		"prefix": "outarr2d",
+		"body": [
+			"for (int i = 0; i < ${1:arr2d}.length; i++) {",
+			"    for (int j = 0; j < ${1:arr2d}[i].length; j++) {",
+			"        System.out.print(${1:arr2d}[i][j]);",
+			"        if (j < ${1:arr2d}[i].length - 1) System.out.print(\" \");",
+			"    }",
+			"    System.out.println();",
+			"}"
+		],
+		"description": "int二次元配列を出力（改行あり）"
+	},
+
+	"outlist": {
+		"prefix": "outlist",
+		"body": [
+			"for (int i = 0; i < ${1:list}.size(); i++) {",
+			"    System.out.print(${1:list}.get(i));",
+			"    if (i < ${1:list}.size() - 1) System.out.print(\" \");",
+			"}",
+			"System.out.println();"
+		],
+		"description": "List<Integer> を1行で出力（スペース区切り）"
+	},
+	"outlistln": {
+		"prefix": "outlistln",
+		"body": [
+			"for (${1:int} x : ${2:list}) {",
+			"    System.out.println(x);",
+			"}"
+		],
+		"description": "リストの各要素を1行ずつ出力"
+	},
+	"outlist2d": {
+		"prefix": "outlist2d",
+		"body": [
+			"for (int i = 0; i < ${1:list2d}.size(); i++) {",
+			"    for (int j = 0; j < ${1:list2d}.get(i).size(); j++) {",
+			"        System.out.print(${1:list2d}.get(i).get(j));",
+			"        if (j < ${1:list2d}.get(i).size() - 1) System.out.print(\" \");",
+			"    }",
+			"    System.out.println();",
+			"}"
+		],
+		"description": "List<List<Integer>> を出力（改行あり）"
+	},
+
+	"sbout": {
+		"prefix": "sbout",
+		"body": [
+			"StringBuilder sb = new StringBuilder();",
+			"for (int i = 0; i < ${1:list}.size(); i++) {",
+			"    sb.append(${1:list}.get(i)).append(\" \");",
+			"}",
+			"System.out.println(sb.toString().trim());"
+			],
+		"description": "StringBuilder を使って高速に1行出力"
+	},
+
+
+	//座標系
+	"dxdy": {
+		"prefix": "dxdy",
+		"body": [
+			"int[] dx = {-1, 0, 1, 0};",
+			"int[] dy = {0, -1, 0, 1};"
+		],
+		"description": "4方向の移動ベクトル"
+	},
+
+	"dxdy8": {
+		"prefix": "dxdy8",
+		"body": [
+			"int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};",
+			"int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};"
+		],
+		"description": "8方向の移動ベクトル"
+	},
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+}

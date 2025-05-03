@@ -209,7 +209,7 @@
 		],
 		"description": "Input 2D List<String> (List of List)"
 	},
-	//変換系 List to Array, array to List
+//変換系 List to Array, array to List
 
 	"inarr2list": {
 		"prefix": "arr2list",
@@ -237,7 +237,7 @@
 	},
 
 
-	//出力系　
+//出力系　
 
 	"outln": {
 		"prefix": "outln",
@@ -331,8 +331,40 @@
 		"description": "StringBuilder を使って高速に1行出力"
 	},
 
+//for系
 
-	//座標系
+
+	"fori": {
+		"prefix": "fori",
+		"body": [
+			"for (int i = 0; i < ${1:n}; i++) {",
+			"    ${2:/* code */}",
+			"}"
+		],
+		"description": "for文（i=0からn-1まで）"
+	},
+	"forj": {
+		"prefix": "forj",
+		"body": [
+			"for (int j = 0; j < ${1:n}; j++) {",
+			"    ${2:/* code */}",
+			"}"
+		],
+		"description": "for文（j=0からn-1まで）"
+	},
+	"fork": {
+		"prefix": "fork",
+		"body": [
+			"for (int k = 0; k < ${1:n}; k++) {",
+			"    ${2:/* code */}",
+			"}"
+		],
+		"description": "for文（k=0からn-1まで）"
+	},
+
+
+
+//座標系
 	"dxdy": {
 		"prefix": "dxdy",
 		"body": [

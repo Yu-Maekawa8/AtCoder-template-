@@ -1,17 +1,92 @@
 "Java CP Scanner Template": {
-	  "prefix": "jtem",
-	  "body": [
-		"import java.util.*;",
-		"",
-		"public class Main {",
-		"    public static void main(String[] args) {",
-		"        try (Scanner sc = new Scanner(System.in)) {",
-		"            $0",
-		"        }",
-		"    }",
-		"}"
-	  ],
-	  "description": "Java competitive programming template using Scanner"
+		"prefix": "jtem",
+		"body": [
+			"import java.util.*;",
+			"import java.math.*;",
+			"",
+			"public class Main {",
+			"    public static void main(String[] args) {",
+			"        try (Scanner sc = new Scanner(System.in)) {",
+			"            $0",
+			"        }",
+			"    }",
+			"}",
+			// "static class Pair {",
+			// "    int x, y;",
+			// "    Pair(int x, int y) {",
+			// "        this.x = x; this.y = y;",
+			// "    }",
+			// "",
+			// "    @Override",
+			// "    public boolean equals(Object o) {",
+			// "        if (this == o) return true;",
+			// "        if (!(o instanceof Pair)) return false;",
+			// "        Pair p = (Pair) o;",
+			// "        return x == p.x && y == p.y;",
+			// "    }",
+			// "",
+			// "    @Override",
+			// "    public int hashCode() {",
+			// "        return 31 * x + y;",
+			// "    }",
+			// "}",
+			// "",
+			// "int[][] dirs = {{0,1}, {1,0}, {0,-1}, {-1,0}}; // 4方向移動",
+			// "",
+			// "void bfs(int sx, int sy, int[][] grid) {",
+			// "    int h = grid.length, w = grid[0].length;",
+			// "    boolean[][] visited = new boolean[h][w];",
+			// "    Queue<Pair> queue = new LinkedList<>();",
+			// "    queue.add(new Pair(sx, sy));",
+			// "    visited[sx][sy] = true;",
+			// "",
+			// "    while (!queue.isEmpty()) {",
+			// "        Pair p = queue.poll();",
+			// "        for (int[] d : dirs) {",
+			// "            int nx = p.x + d[0], ny = p.y + d[1];",
+			// "            if (0 <= nx && nx < h && 0 <= ny && ny < w && !visited[nx][ny]) {",
+			// "                visited[nx][ny] = true;",
+			// "                queue.add(new Pair(nx, ny));",
+			// "            }",
+			// "        }",
+			// "    }",
+			// "}",
+			// "",
+			// "static class UnionFind {",
+			// "    int[] parent, size;",
+			// "",
+			// "    UnionFind(int n) {",
+			// "        parent = new int[n];",
+			// "        size = new int[n];",
+			// "        for (int i = 0; i < n; i++) {",
+			// "            parent[i] = i;",
+			// "            size[i] = 1;",
+			// "        }",
+			// "    }",
+			// "",
+			// "    int find(int x) {",
+			// "        if (x != parent[x]) parent[x] = find(parent[x]);",
+			// "        return parent[x];",
+			// "    }",
+			// "",
+			// "    void union(int x, int y) {",
+			// "        int xr = find(x), yr = find(y);",
+			// "        if (xr == yr) return;",
+			// "        if (size[xr] < size[yr]) {",
+			// "            parent[xr] = yr;",
+			// "            size[yr] += size[xr];",
+			// "        } else {",
+			// "            parent[yr] = xr;",
+			// "            size[xr] += size[yr];",
+			// "        }",
+			// "    }",
+			// "",
+			// "    boolean same(int x, int y) {",
+			// "        return find(x) == find(y);",
+			// "    }",
+			// "}"
+		],
+		"description": "Java competitive programming template using Scanner"
 	},
 	  
 	"in": {
@@ -21,7 +96,7 @@
 	},
 	"in2": {
 		"prefix": "in2",
-		"body": ["int in1 = sc.nextInt();", "int in2 = sc.nextInt();"],
+		"body": ["int n = sc.nextInt();", "int m = sc.nextInt();"],
 		"description": "Two int inputs"
 	},
 	"in3": {
@@ -54,12 +129,23 @@
 		],
 		"description": "Five int inputs"
 	},
+	"only array": {
+		"prefix": "onlyar",
+		"body": [
+		"int[] ar = new int[${1:n}];",
+		"for (int i = 0; i < ar.length; i++) {",
+		"    ar[i] = sc.nextInt();",
+		"}"
+		],
+		"description": "Input an array"
+	},
+
 	"arin": {
 		"prefix": "ar",
 		"body": [
-		"int size = sc.nextInt();",
-		"int[] ar = new int[size];",
-		"for (int i = 0; i < size; i++) {",
+		"int n = sc.nextInt();",
+		"int[] ar = new int[n];",
+		"for (int i = 0; i < n; i++) {",
 		"    ar[i] = sc.nextInt();",
 		"}"
 		],
@@ -78,6 +164,19 @@
 		"}"
 		],
 		"description": "Input a 2D array"
+	},
+	"eqar2": {
+		"prefix": "eqar2",
+		"body": [
+		"int n = sc.nextInt();",
+		"int[][] grid = new int[n][n];",
+		"for (int i = 0; i < n; i++) {",
+		"    for (int j = 0; j < n; j++) {",
+		"        grid[i][j] = sc.nextInt();",
+		"    }",
+		"}"
+		],
+		"description": "縦横同じサイズの2D配列を入力"
 	},
 	"lo": {
 	  "prefix": "lo",
@@ -331,14 +430,41 @@
 		"description": "StringBuilder を使って高速に1行出力"
 	},
 
-//for系
+	"yes":{
+		"prefix": "yes",
+		"body": [
+			"System.out.println(\"Yes\");"
+		],
+		"description": "Yesを出力"
+	},
+	"no":{
+		"prefix": "no",
+		"body": [
+			"System.out.println(\"No\");"
+		],
+		"description": "Noを出力"
+	},
+
+	"yesno":{
+		"prefix": "yn",
+		"body": [
+			"if (${1:condition}) {",
+			"    System.out.println(\"Yes\");",
+			"} else {",
+			"    System.out.println(\"No\");",
+			"}"
+		],
+		"description": "Yes/Noを出力"
+	},
+
+	//for系
 
 
 	"fori": {
 		"prefix": "fori",
 		"body": [
 			"for (int i = 0; i < ${1:n}; i++) {",
-			"    ${2:/* code */}",
+			"    ",
 			"}"
 		],
 		"description": "for文（i=0からn-1まで）"
@@ -347,7 +473,7 @@
 		"prefix": "forj",
 		"body": [
 			"for (int j = 0; j < ${1:n}; j++) {",
-			"    ${2:/* code */}",
+			"    ",
 			"}"
 		],
 		"description": "for文（j=0からn-1まで）"
@@ -356,11 +482,119 @@
 		"prefix": "fork",
 		"body": [
 			"for (int k = 0; k < ${1:n}; k++) {",
-			"    ${2:/* code */}",
+			"    ",
 			"}"
 		],
 		"description": "for文（k=0からn-1まで）"
 	},
+
+//キュー・スタック
+	"que": {
+		"prefix": "que",
+		"body": [
+			"Queue<Integer> queue = new LinkedList<>();"
+		],
+		"description": "キューの初期化"
+	},
+
+	"stac": {
+		"prefix": "stac",
+		"body": [
+			"Stack<Integer> stack = new Stack<>();"
+		],
+		"description": "スタックの初期化"
+	},
+	"deq": {
+		"prefix": "deq",
+		"body": [
+			"Deque<Integer> deque = new ArrayDeque<>();"
+		],
+		"description": "デックの初期化(dequeは両端キュー、スタックとしても扱える)"
+	},
+
+	"pri": {
+		"prefix": "pri",
+		"body": [
+			"PriorityQueue<Integer> pq = new PriorityQueue<>();"
+		],
+		"description": "優先度付きキューの初期化"
+	},
+	"prirev": {
+		"prefix": "prirev",
+		"body": [
+			"PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());"
+		],
+		"description": "優先度付きキューの初期化（降順）"
+	},
+
+//数学系
+	"gcd": {
+		"prefix": "gcd",
+		"body": [
+			"int gcd(int a, int b) {",
+			"    while (b != 0) {",
+			"        int t = b;",
+			"        b = a % b;",
+			"        a = t;",
+			"    }",
+			"    return a;",
+			"}"
+		],
+		"description": "最大公約数を求める関数"
+	},
+
+	"lcm": {
+		"prefix": "lcm",
+		"body": [
+			"int lcm(int a, int b) {",
+			"    return a / gcd(a, b) * b;",
+			"}"
+		],
+		"description": "最小公倍数を求める関数"
+	},
+	"mod": {
+		"prefix": "mod",
+		"body": [
+			"int mod = 1000000007;"
+		],
+		"description": "modの初期化"
+	},
+	"mod2": {
+		"prefix": "mod2",
+		"body": [
+			"int mod = 998244353;"
+		],
+		"description": "modの初期化"
+	},
+	"prime": {
+		"prefix": "prime",
+		"body": [
+			"boolean isPrime(int n) {",
+			"    if (n <= 1) return false;",
+			"    for (int i = 2; i * i <= n; i++) {",
+			"        if (n % i == 0) return false;",
+			"    }",
+			"    return true;",
+			"}"
+		],
+		"description": "素数判定関数"
+	},
+	"pow": {
+		"prefix": "pow",
+		"body": [
+			"long pow(long a, long b) {",
+			"    long res = 1;",
+			"    while (b > 0) {",
+			"        if ((b & 1) == 1) res = res * a % mod;",
+			"        a = a * a % mod;",
+			"        b >>= 1;",
+			"    }",
+			"    return res;",
+			"}"
+		],
+		"description": "a^bをmodで割った余りを求める関数"
+	},
+
 
 
 
@@ -368,8 +602,8 @@
 	"dxdy": {
 		"prefix": "dxdy",
 		"body": [
-			"int[] dx = {1, 0, -1, 0};",
-			"int[] dy = {0, 1, 0, -1};"
+			"int[] dx = {-1, 0, 1, 0};",
+			"int[] dy = {0, -1, 0, 1};"
 		],
 		"description": "4方向の移動ベクトル"
 	},
@@ -377,28 +611,139 @@
 	"dxdy8": {
 		"prefix": "dxdy8",
 		"body": [
-			"int[] dx = {1, 1, 0, -1, -1, -1, 0, 1};",
-			"int[] dy = {0, -1, -1, -1, 0, 1, 1, 1};"
+			"int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};",
+			"int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};"
 		],
 		"description": "8方向の移動ベクトル"
 	},
 
-	
+//MapとSet系
+	"map": {
+		"prefix": "map",
+		"body": [
+			"Map<Integer, Integer> map = new HashMap<>();"
+		],
+		"description": "HashMapの初期化"
+	},
+
+	"maptolist": {
+		"prefix": "maptolist",
+		"body": [
+			"List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());",
+			"list.sort(Map.Entry.comparingByValue());",  // 昇順
+			"list.sort(Map.Entry.<String, Integer>comparingByValue().reversed());" // 降順,
+		],
+		"description": "Mapの値をListに変換"
+	},
+
+	"set": {
+		"prefix": "set",
+		"body": [
+			"Set<Integer> set = new HashSet<>();"
+		],
+		"description": "HashSetの初期化"
+	},
 
 
 
+//メゾット系
 
+	"Create Pair Class": {
+		"prefix": "pairclass",
+		"body": [
+			"class Pair implements Comparable<Pair> {",
+			"    int first, second;",
+			"",
+			"    Pair(int first, int second) {",
+			"        this.first = first;",
+			"        this.second = second;",
+			"    }",
+			"",
+			"    @Override",
+			"    public int compareTo(Pair o) {",
+			"        if (this.first != o.first) {",
+			"            return Integer.compare(this.first, o.first);",
+			"        }",
+			"        return Integer.compare(this.second, o.second);",
+			"    }",
+			"}"
+		],
+		"description": "Comparable を実装した Pair クラスを作成する"
+		},
 
+		"Sort List of Pairs": {
+			"prefix": "sortpairs",
+			"body": [
+				"static void sortPairs(List<Pair> p) {",
+				"    Collections.sort(p);",
+				"}"
+			],
+			"description": "Pairのリストをソートするメソッド"
+		},
 
+		"bfs": {
+			"prefix": "bfs",
+			"body": [
+				"void bfs(int start, int[][] graph) {",
+				"    boolean[] visited = new boolean[graph.length];",
+				"    Queue<Integer> queue = new LinkedList<>();",
+				"    queue.add(start);",
+				"    visited[start] = true;",
+				"",
+				"    while (!queue.isEmpty()) {",
+				"        int node = queue.poll();",
+				"        // Do something with node",
+				"        for (int neighbor : graph[node]) {",
+				"            if (!visited[neighbor]) {",
+				"                visited[neighbor] = true;",
+				"                queue.add(neighbor);",
+				"            }",
+				"        }",
+				"    }",
+				"}"
+			],
+			"description": "BFSアルゴリズムのテンプレート"
+		},
 
+		"reversed bfs": {
+			"prefix": "revbfs",
+			"body": [
+				"void reversedBFS(int start, int[][] graph) {",
+				"    boolean[] visited = new boolean[graph.length];",
+				"    Queue<Integer> queue = new LinkedList<>();",
+				"    queue.add(start);",
+				"    visited[start] = true;",
+				"",
+				"    while (!queue.isEmpty()) {",
+				"        int node = queue.poll();",
+				"        // Do something with node",
+				"        for (int neighbor : graph[node]) {",
+				"            if (!visited[neighbor]) {",
+				"                visited[neighbor] = true;",
+				"                queue.add(neighbor);",
+				"            }",
+				"        }",
+				"    }",
+				"}"
+			],
+			"description": "BFSアルゴリズムの逆順テンプレート"
+		},
 
-
-
-
-
-
-
-	
+		"dfs": {
+			"prefix": "dfs",
+			"body": [
+				"void dfs(int node, boolean[] visited, int[][] graph) {",
+				"    visited[node] = true;",
+				"    // Do something with node",
+				"    for (int neighbor : graph[node]) {",
+				"        if (!visited[neighbor]) {",
+				"            dfs(neighbor, visited, graph);",
+				"        }",
+				"    }",
+				"}"
+			],
+			"description": "DFSアルゴリズムのテンプレート"
+		}
 	
 	
 }

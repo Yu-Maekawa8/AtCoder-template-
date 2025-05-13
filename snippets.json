@@ -555,14 +555,14 @@
 	"mod": {
 		"prefix": "mod",
 		"body": [
-			"int mod = 1000000007;"
+			"final int MOD = 1000000007;"
 		],
 		"description": "modの初期化"
 	},
 	"mod2": {
 		"prefix": "mod2",
 		"body": [
-			"int mod = 998244353;"
+			"final int MOD = 998244353;"
 		],
 		"description": "modの初期化"
 	},

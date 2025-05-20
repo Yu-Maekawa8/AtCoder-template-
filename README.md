@@ -1,4 +1,6 @@
-# Java Competitive Programming Snippets for VSCode
+# Java/C++ Competitive Programming Snippets & template for VSCode
+
+# Java
 
 このリポジトリは、競技プログラミングで使える **Java の VSCode 用スニペット集**です。  
 よく使う入力・出力・アルゴリズム・データ構造などのコードを、ショートカットで素早く呼び出せます。
@@ -133,3 +135,6 @@ for (int i = 0; i < n; i++) {
 for (int x : ar) {
     System.out.print(x + " ");
 }
+
+#C++
+テンプレート作成中
